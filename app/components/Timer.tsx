@@ -53,11 +53,11 @@ function Timer({initialMinutes, initialSeconds}: TimerProps) {
             </h1>
             <div className="flex space-x-4">
                 <button
-                    className="w-[140px] flex items-center px-4 py-3 text-white bg-black rounded-sm"
+                    className="w-[150px] flex items-center px-4 py-3 text-white bg-black rounded-sm"
                     onClick={toggleIsActive}>
                     {isActive
                         ?
-                            // Timer is active, show pause
+                            // Timer is active, show pause icon
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="32"
@@ -69,7 +69,7 @@ function Timer({initialMinutes, initialSeconds}: TimerProps) {
                                     d="M9 16h2V8H9v8Zm4 0h2V8h-2v8Zm-1 6q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z"/>
                             </svg>
                         :
-                            // Timer is not active, show play
+                            // Timer is not active, show play icon
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="32"
@@ -84,7 +84,7 @@ function Timer({initialMinutes, initialSeconds}: TimerProps) {
                     <span>{isActive ? 'Pause' : 'Start'}</span>
                 </button>
                 <button
-                    className="w-[140px] flex items-center px-4 py-3 text-white bg-black rounded-sm"
+                    className="w-[150px] flex items-center px-4 py-3 text-white bg-black rounded-sm"
                     onClick={resetTimer}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
