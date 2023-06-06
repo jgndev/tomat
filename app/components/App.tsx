@@ -5,7 +5,7 @@ function App() {
 
     const [activeTab, setActiveTab] = useState('work')
     const [key, setKey] = useState(Date.now());
-    const workDuration = 25; // TODO: Get this from local storage
+    const workDuration = 1; // TODO: Get this from local storage
     const shortBreakDuration = 5; // TODO: Get this from local storage
     const longBreakDuration = 15; // TODO: Get this from local storage
 
