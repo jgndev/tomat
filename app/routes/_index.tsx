@@ -5,14 +5,13 @@ import App from "~/components/App";
 export const meta: V2_MetaFunction = () => {
   return [
     { title: "Tomat" },
-    { name: "description", content: "Welcome to Remix!" },
+    { name: "description", content: "25:00 - Time to focus with Tomat" },
   ];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      {/*<Timer initialMinutes={3} initialSeconds={0} />*/}
+    <div className="min-h-screen flex items-center justify-center">
       <App />
     </div>
   );

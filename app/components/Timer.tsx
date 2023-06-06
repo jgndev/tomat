@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-
-interface TimerProps {
-  initialMinutes: number;
-  initialSeconds: number;
-}
+import type {TimerProps} from "~/interfaces/timerProps";
 
 function Timer({ initialMinutes, initialSeconds }: TimerProps) {
 
