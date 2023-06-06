@@ -109,7 +109,7 @@ const Navbar = () => {
 
                         {/*Long Break Time Settings*/}
                         <div>
-                            <span>Short Break Time</span>
+                            <span>Long Break Time</span>
                             <div className="mb-4 w-[300px]">
                                 <button
                                     className="w-[2rem] bg-red-700 text-white mr-2 rounded-md"
