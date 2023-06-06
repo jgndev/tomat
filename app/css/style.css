@@ -10,6 +10,7 @@
     font-weight: 400;
     src: url('../../public/fonts/azeret-mono-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* azeret-mono-700 - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -18,6 +19,7 @@
     font-weight: 700;
     src: url('../../public/fonts/azeret-mono-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* azeret-mono-900 - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -26,6 +28,7 @@
     font-weight: 900;
     src: url('../../public/fonts/azeret-mono-v17-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* Din Regular */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -34,6 +37,7 @@
     font-weight: 400;
     src: url('../../public/fonts/D-DIN.otf') format('otf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* Din Bold */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -43,5 +47,14 @@
     src: url('../../public/fonts/D-DIN-Bold.otf') format('otf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-@layer base {
+@layer components {
+    .no-spinners::-webkit-inner-spin-button,
+    .no-spinners::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .no-spinners {
+        -moz-appearance: textfield;
+    }
 }

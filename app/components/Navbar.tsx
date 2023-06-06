@@ -3,36 +3,44 @@ import React, {useState} from 'react';
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const handleFocusIncrement = () => {
+
+    }
+
+    const handleFocusDecrement = () => {
+
+    }
+
     return (
         <nav className="flex justify-between items-center p-4">
             <div>
                 {/* Tomato Logo */}
                 <a href="/" aria-label="Home - Tomat">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-zinc-900"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 48 48">
-                    <mask id="ipTTomato0">
-                        <g
-                            fill="none"
-                            stroke="#fff"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="4">
-                            <path
-                                fill="#555"
-                                d="M24 44c11.046 0 20-7.387 20-16.5c0-6.442-4.475-11.799-11-14.516L29.5 14.5L30 20l-6.5-2l-6.5 2v-5.5l-3-1.516C8.022 15.837 4 21.393 4 27.5C4 36.613 12.954 44 24 44Z"/>
-                            <path
-                                d="m23.5 4l3.809 5.117L36 9.91l-6.337 4.573L31.5 21l-8-3l-8 3l1.837-6.517L11 9.91l8.691-.793L23.5 4Z"/>
-                        </g>
-                    </mask>
-                    <path
-                        fill="currentColor"
-                        d="M0 0h48v48H0z"
-                        mask="url(#ipTTomato0)"/>
-                </svg>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="text-zinc-900"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 48 48">
+                        <mask id="ipTTomato0">
+                            <g
+                                fill="none"
+                                stroke="#fff"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="4">
+                                <path
+                                    fill="#555"
+                                    d="M24 44c11.046 0 20-7.387 20-16.5c0-6.442-4.475-11.799-11-14.516L29.5 14.5L30 20l-6.5-2l-6.5 2v-5.5l-3-1.516C8.022 15.837 4 21.393 4 27.5C4 36.613 12.954 44 24 44Z"/>
+                                <path
+                                    d="m23.5 4l3.809 5.117L36 9.91l-6.337 4.573L31.5 21l-8-3l-8 3l1.837-6.517L11 9.91l8.691-.793L23.5 4Z"/>
+                            </g>
+                        </mask>
+                        <path
+                            fill="currentColor"
+                            d="M0 0h48v48H0z"
+                            mask="url(#ipTTomato0)"/>
+                    </svg>
                 </a>
             </div>
             <div>
@@ -52,8 +60,100 @@ const Navbar = () => {
             {isModalOpen && (
                 <div
                     className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-black bg-opacity-50">
-                    <div className="bg-white p-4 rounded">
-                        <h2 className="text-lg mb-4">Tomat Settings</h2>
+                    <div className="w-[25%] bg-white p-4 rounded">
+                        <h2 className="text-center text-2xl mb-4">Tomat Settings</h2>
+
+                        {/*Focus Time Settings*/}
+                        <div>
+                            <span>Focus Time</span>
+                            <div className="mb-4 w-[300px]">
+                                <button
+                                    className="w-[2rem] bg-red-700 text-white mr-2 rounded-md"
+                                    onClick={handleFocusDecrement}>
+                                    -
+                                </button>
+                                <input
+                                    className="no-spinners w-[3rem] p-1 font-mono text-center text-white bg-black border border-zinc-300 rounded-sm"
+                                    type="number"
+                                    value="25"
+                                    onChange={() => console.log("Clicked!")}/>
+                                <button
+                                    className="w-[2rem] bg-green-700 text-white ml-2 rounded-md"
+                                    onClick={handleFocusIncrement}>
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        {/*Short Break Time Settings*/}
+                        <div>
+                            <span>Short Break Time</span>
+                            <div className="mb-4 w-[300px]">
+                                <button
+                                    className="w-[2rem] bg-red-700 text-white mr-2 rounded-md"
+                                    onClick={handleFocusDecrement}>
+                                    -
+                                </button>
+                                <input
+                                    className="no-spinners w-[3rem] p-1 font-mono text-center text-white bg-black border border-zinc-300 rounded-sm"
+                                    type="number"
+                                    value="5"
+                                    onChange={() => console.log("Clicked!")}/>
+                                <button
+                                    className="w-[2rem] bg-green-700 text-white ml-2 rounded-md"
+                                    onClick={handleFocusIncrement}>
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        {/*Long Break Time Settings*/}
+                        <div>
+                            <span>Short Break Time</span>
+                            <div className="mb-4 w-[300px]">
+                                <button
+                                    className="w-[2rem] bg-red-700 text-white mr-2 rounded-md"
+                                    onClick={handleFocusDecrement}>-
+                                </button>
+                                <input
+                                    className="no-spinners w-[3rem] p-1 font-mono text-center text-white bg-black border border-zinc-300 rounded-sm"
+                                    type="number"
+                                    value="15"
+                                    onChange={() => console.log("Clicked!")}/>
+                                <button
+                                    className="w-[2rem] bg-green-700 text-white ml-2 rounded-md"
+                                    onClick={handleFocusIncrement}>+
+                                </button>
+                            </div>
+                        </div>
+
+                        {/*Toggle Auto-Start Focus*/}
+                        <div className="my-4">
+                            <label className="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" className="sr-only peer"/>
+                                <div
+                                    className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                <span
+                                    className="ml-3 text-sm font-medium">
+                                    Auto-Start Focus
+                                </span>
+                            </label>
+                        </div>
+
+                        {/*Toggle Auto-Start Breaks*/}
+                        <div className="my-4">
+                            <label className="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" className="sr-only peer"/>
+                                <div
+                                    className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                <span
+                                    className="ml-3 text-sm font-medium">
+                                    Auto-Start Breaks
+                                </span>
+                            </label>
+                        </div>
+
+
                         <button className="px-4 py-2 bg-red-500 text-white rounded"
                                 onClick={() => setIsModalOpen(false)}>
                             Close
