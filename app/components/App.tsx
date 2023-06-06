@@ -1,5 +1,6 @@
 import {useState} from "react";
 import Timer from "~/components/Timer";
+import Navbar from "~/components/Navbar";
 
 function App() {
 
