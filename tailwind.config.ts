@@ -4,7 +4,8 @@ export default {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      'mono': ['Azeret Mono']
+      'mono': ['Azeret Mono', 'ui-monospace'],
+      'sans': ['Din', 'ui-sans-serif', 'system-ui'],
     },
     extend: {},
   },
