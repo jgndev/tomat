@@ -6,18 +6,18 @@ import Navbar from "~/components/Navbar";
 export const meta: V2_MetaFunction = () => {
     return [
         {title: "Tomat"},
-        {name: "description", content: "25:00 - Get focused with Tomat"},
+        {name: "description", content: "25:00 - Get focused with Tomat, a pomodoro timer"},
     ];
 };
 
 export default function Index() {
     return (
-        <div className="border-2 border-green-400">
+        <main className="mx-8">
             <Navbar/>
-            <div className="border-2 border-purple-400">
+            <div className="">
                 <App/>
             </div>
 
-        </div>
+        </main>
     );
 }

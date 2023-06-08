@@ -53,7 +53,7 @@ function Timer({initialMinutes, initialSeconds}: TimerProps) {
             </h1>
             <div className="flex space-x-4">
                 <button
-                    className="w-[150px] flex items-center px-4 py-3 text-white bg-black rounded-sm"
+                    className="w-[150px] flex items-center px-4 py-3 text-white bg-black rounded-md"
                     onClick={toggleIsActive}>
                     {isActive
                         ?
@@ -84,7 +84,7 @@ function Timer({initialMinutes, initialSeconds}: TimerProps) {
                     <span>{isActive ? 'Pause' : 'Start'}</span>
                 </button>
                 <button
-                    className="w-[150px] flex items-center px-4 py-3 text-white bg-black rounded-sm"
+                    className="w-[150px] flex items-center px-4 py-3 text-white bg-black rounded-md"
                     onClick={resetTimer}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

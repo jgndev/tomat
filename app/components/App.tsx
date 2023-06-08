@@ -25,17 +25,17 @@ function App() {
     <div className="mt-8 grid place-content-center place-items-center">
       <div className="flex justify-center items-center space-x-4">
         <button
-          className="w-[160px] px-4 py-3 text-zinc-100 bg-black rounded-sm"
+          className="w-[160px] px-4 py-3 text-zinc-100 bg-black rounded-md"
           onClick={() => handleTabChange(focus)}>
           Focus
         </button>
         <button
-          className="w-[160px] px-4 py-3 text-zinc-100 bg-black rounded-sm"
+          className="w-[160px] px-4 py-3 text-zinc-100 bg-black rounded-md"
           onClick={() => handleTabChange(shortBreak)}>
           Short Break
         </button>
         <button
-          className="w-[160px] px-4 py-3 text-zinc-100 bg-black rounded-sm"
+          className="w-[160px] px-4 py-3 text-zinc-100 bg-black rounded-md"
           onClick={() => handleTabChange(longBreak)}>
           Long Break
         </button>
